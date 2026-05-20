@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback | Elite Catering</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2b2b2b);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: gold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      opacity: 0.8;
+      font-size: 16px;
+    }
+
+    /* FEEDBACK CARD */
+    .feedback-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .feedback-card {
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .feedback-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: gold;
+      font-family: "Playfair Display", serif;
+    }
+
+    .feedback-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    .feedback-form textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    .feedback-form button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .feedback-form button:hover {
+      background: #ffd700;
+      transform: scale(1.05);
+    }
+
+    /* MESSAGE */
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      display: none;
+      color: lightgreen;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 8px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: gold;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Elite Catering</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>We Value Your Feedback</h1>
+    <p>Your opinion helps us serve better luxury dining experiences</p>
+  </div>
+
+  <!-- FORM -->
+  <div class="feedback-wrapper">
+    <div class="feedback-card">
+      <h2>Send Us Your Thoughts</h2>
+
+      <form class="feedback-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Write your message..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+      <div class="message" id="msg">
+        Thank you! We received your feedback 🙏
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Elite Catering. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.querySelector(".feedback-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("msg").style.display = "block";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
